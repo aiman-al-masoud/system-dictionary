@@ -24,4 +24,4 @@ class Controller:
         dict_entry = self.context.word_dict[get_selected_word()]
 
         if dict_entry:
-            get_window(dict_entry).open()
+            get_window(dict_entry, self.context.config).open()
