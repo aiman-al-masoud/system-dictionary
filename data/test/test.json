@@ -1,0 +1,66 @@
+{
+    "A": {
+        "MEANINGS": {
+            "6": [
+                "Noun",
+                "the 1st letter of the Roman alphabet",
+                [
+                    "Letter",
+                    "Letter of the alphabet",
+                    "Alphabetic character"
+                ],
+                []
+            ],
+            "7": [
+                "Noun",
+                "the blood group whose red cells carry the A antigen",
+                [
+                    "Blood group",
+                    "Blood type"
+                ],
+                []
+            ]
+        },
+        "ANTONYMS": [],
+        "SYNONYMS": [
+            "Ampere",
+            "Type a",
+            "Antiophthalmic factor",
+            "Angstrom",
+            "Adenine"
+        ]
+    },
+    "ABDICATIONS": {
+        "MEANINGS": {},
+        "ANTONYMS": [],
+        "SYNONYMS": [
+            "Stepping down",
+            "Abdication"
+        ]
+    },
+    "ABDICATION": {
+        "MEANINGS": {
+            "1": [
+                "Noun",
+                "a formal resignation and renunciation of powers",
+                [
+                    "Resignation"
+                ],
+                []
+            ],
+            "2": [
+                "Noun",
+                "the act of abdicating",
+                [
+                    "Resignation"
+                ],
+                []
+            ]
+        },
+        "ANTONYMS": [],
+        "SYNONYMS": [
+            "Stepping down",
+            "Abdication"
+        ]
+    }
+}

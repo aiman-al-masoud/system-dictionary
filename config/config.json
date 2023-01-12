@@ -1,0 +1,4 @@
+{
+    "dict_dir": "../data/english-dictionary",
+    "cache_pickle": "../cache.pickle"
+}
