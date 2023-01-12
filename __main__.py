@@ -1,6 +1,6 @@
 
 from model.Context import Context
-from ui.Controller import Controller
+from controller.Controller import Controller
 
 context  = Context.get_context()
 
