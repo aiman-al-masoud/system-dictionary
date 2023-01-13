@@ -6,6 +6,14 @@
         "history_file": "/home/aiman/gitRepos/system-dictionary/res/history.txt"
     },
     "combos": [
+
+        {
+            "command": "show_history",
+            "keys": [
+                "ctrl_l",
+                "j"
+            ]
+        },
         {
             "command": "lookup_word",
             "keys": [
