@@ -12,7 +12,7 @@ class Context:
     @classmethod
     def get_context(cls) -> 'Context':
 
-        path = os.path.join(os.path.split(__file__)[0], '..', 'config', 'config.json')
+        path = os.path.join(os.path.split(__file__)[0], '..', '..', 'res', 'config', 'config.json')
         config = Config.from_path(path)
         word_dict = WordDict.get_word_dict(config)
 

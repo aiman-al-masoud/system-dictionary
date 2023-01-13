@@ -1,5 +1,5 @@
 {
     "dict_dir": "../data/english-dictionary",
     "cache_pickle": "../cache.pickle",
-    "tmp_file_name" : "tmp.html"
+    "tmp_file_name" : "../tmp.html"
 }
