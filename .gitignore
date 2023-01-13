@@ -3,5 +3,5 @@ tmp.*
 history.*
 __pycache__/
 data/english-dictionary/
-/data/* 
-!/data/README.md
+/res/data/*
+!/res/data/README.md
