@@ -1,5 +1,16 @@
 {
-    "dict_dir": "../data/english-dictionary",
-    "cache_pickle": "../cache.pickle",
-    "tmp_file_name" : "../tmp.html"
+    "paths": {
+        "dict_dir": "/home/aiman/gitRepos/system-dictionary/res/data/english-dictionary",
+        "cache_pickle": "/home/aiman/gitRepos/system-dictionary/res/cache.pickle",
+        "tmp_file_name": "/home/aiman/gitRepos/system-dictionary/res/tmp.html"
+    },
+    "combos": [
+        {
+            "command": "lookup_word",
+            "keys": [
+                "ctrl_l",
+                "space"
+            ]
+        }
+    ]
 }

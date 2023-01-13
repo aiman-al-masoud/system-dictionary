@@ -1,24 +1,22 @@
 from dataclasses import dataclass
 import json
-import os
+from typing import Sequence
+
+from model.Combo import Combo
+from model.Paths import Paths
 
 
 @dataclass
 class Config:
-    dict_dir: str
-    cache_pickle: str
-    tmp_file_name: str
+    paths: Paths
+    combos: Sequence[Combo]
 
     @classmethod
-    def from_json(cls, json: dict) -> 'Config':
-        return Config(json['dict_dir'], json['cache_pickle'], json['tmp_file_name'])
+    def from_json(cls, json: dict, relative_to: str) -> 'Config':
+
+        return Config(Paths.from_json(json['paths'], relative_to),
+                      [Combo.from_json(c) for c in json['combos']])
 
     @classmethod
     def from_path(cls, path: str) -> 'Config':
-
-        def rltvz(p: str):
-            config_dir = os.path.split(path)[0]
-            return os.path.join(config_dir, *p.split('/'))
-
-        myjson = json.loads(open(path).read())
-        return Config(rltvz(myjson['dict_dir']), rltvz(myjson['cache_pickle']), rltvz(myjson['tmp_file_name']))
+        return cls.from_json(json.loads(open(path, 'r').read()), path)

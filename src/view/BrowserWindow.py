@@ -1,4 +1,4 @@
-import os
+import webbrowser
 from model.Config import Config
 
 from model.DictEntry import DictEntry
@@ -14,8 +14,9 @@ class BrowserWindow(WordWindow):
 
     def open(self):
 
-        with open(self.config.tmp_file_name, 'w+') as f:
-
+        with open(self.config.paths.tmp_file_name, 'w+') as f:
             f.write(to_html(self.dict_entry))
 
-        os.popen(f'firefox {self.config.tmp_file_name}')
+        webbrowser.open(self.config.paths.tmp_file_name)
+        # os.popen(f'firefox {self.config.paths.tmp_file_name}')
+        

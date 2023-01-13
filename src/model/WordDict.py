@@ -52,8 +52,8 @@ class WordDict(dict):
     def get_word_dict(cls, config: Config):
 
         try:
-            return cls.from_pickle(config.cache_pickle)
+            return cls.from_pickle(config.paths.cache_pickle)
         except:
-            d = cls.from_path(config.dict_dir)
-            d.to_pickle(config.cache_pickle)
+            d = cls.from_path(config.paths.dict_dir)
+            d.to_pickle(config.paths.cache_pickle)
             return d
