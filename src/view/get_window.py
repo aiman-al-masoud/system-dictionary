@@ -7,7 +7,7 @@ from view.WordWindow import WordWindow
 
 def get_window(dict_entry: DictEntry, config: Config) -> WordWindow:
 
-    if config.operatin_system == 'Linux':
+    if config.operating_system == 'Linux':
         return NotifySendWindow(dict_entry)
     else:
         return BrowserWindow(dict_entry, config)

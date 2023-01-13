@@ -23,5 +23,5 @@ class Config:
         return cls.from_json(json.loads(open(path, 'r').read()), path)
 
     @property
-    def operatin_system(self):
+    def operating_system(self):
         return platform.system()
