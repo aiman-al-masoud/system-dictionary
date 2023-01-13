@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 import json
+import platform
 from typing import Sequence
 
 from model.Combo import Combo
@@ -20,3 +21,7 @@ class Config:
     @classmethod
     def from_path(cls, path: str) -> 'Config':
         return cls.from_json(json.loads(open(path, 'r').read()), path)
+
+    @property
+    def operatin_system(self):
+        return platform.system()
