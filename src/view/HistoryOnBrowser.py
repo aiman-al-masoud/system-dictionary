@@ -1,8 +1,7 @@
-from model.Config import Config
 from model.Context import Context
 from view.HistoryView import HistoryView
-from model.History import History
 import webbrowser
+from functools import reduce
 
 
 class HistoryOnBrowser(HistoryView):
@@ -14,6 +13,11 @@ class HistoryOnBrowser(HistoryView):
     def open(self):
 
         with open(self.context.config.paths.tmp_file_name, 'w+') as f:
-            f.write(str(self.context.history.words))
+
+            html = '<ul>' +  \
+                reduce(lambda a, b: a+b, [f'<li>{w}</li>' for w in self.context.history.words], '') +\
+                '</ul>'
+
+            f.write(html)
 
         webbrowser.open(self.context.config.paths.tmp_file_name)
