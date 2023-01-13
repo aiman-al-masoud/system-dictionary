@@ -2,6 +2,8 @@
 
 A dictionary that allows you to look up any selected word on your screen though a customizable keybinding.
 
+<img src="res/imgs/demo.gif"></img>
+
 ## Features:
 * offline
 * word lookup
