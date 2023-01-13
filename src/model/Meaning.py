@@ -1,4 +1,4 @@
-from typing import Any, List
+from typing import List
 from model.WordType import WordType
 from dataclasses import dataclass
 
