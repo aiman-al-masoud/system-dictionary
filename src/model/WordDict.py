@@ -9,7 +9,10 @@ from model.Config import Config
 class WordDict(dict):
 
     def __getitem__(self, __key: str) -> Optional[DictEntry]:
-        return super().__getitem__(__key.lower())
+        try:
+            return super().__getitem__(__key.lower())
+        except:
+            return None
 
     @classmethod
     def from_json(cls, json: dict) -> 'WordDict':
