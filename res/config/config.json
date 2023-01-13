@@ -2,7 +2,8 @@
     "paths": {
         "dict_dir": "/home/aiman/gitRepos/system-dictionary/res/data/english-dictionary",
         "cache_pickle": "/home/aiman/gitRepos/system-dictionary/res/cache.pickle",
-        "tmp_file_name": "/home/aiman/gitRepos/system-dictionary/res/tmp.html"
+        "tmp_file_name": "/home/aiman/gitRepos/system-dictionary/res/tmp.html",
+        "history_file": "/home/aiman/gitRepos/system-dictionary/res/history.txt"
     },
     "combos": [
         {

@@ -10,7 +10,7 @@ class WordDict(dict):
 
     def __getitem__(self, __key: str) -> Optional[DictEntry]:
         try:
-            return super().__getitem__(__key.lower())
+            return super().__getitem__(__key.lower().strip())
         except:
             return None
 

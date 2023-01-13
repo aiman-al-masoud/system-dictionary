@@ -1,6 +1,5 @@
 from time import sleep
 from typing import Callable
-from pynput import keyboard
 from controller.KeyListener import KeyListener
 from controller.get_selected_word import get_selected_word
 from model.Command import Command
@@ -50,6 +49,8 @@ class Controller:
 
         if not selected_word:
             return
+
+        self.context.history.add(selected_word)
 
         dict_entry = self.context.word_dict[selected_word]
 
