@@ -1,3 +1,4 @@
+#!/bin/python3
 from model.Context import Context
 from controller.Controller import Controller
 
