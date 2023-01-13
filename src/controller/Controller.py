@@ -1,5 +1,6 @@
 from typing import Union
 from pynput import keyboard
+from controller.KeyListener import KeyListener
 from controller.get_selected_word import get_selected_word
 from model.Context import Context
 from view.get_window import get_window
@@ -9,15 +10,11 @@ class Controller:
 
     def __init__(self, context: Context) -> None:
         self.context = context
-        self.listener = keyboard.Listener(on_press=self.switch)
+        self.key_listener = KeyListener()
+        self.key_listener.define_combo({keyboard.Key.ctrl_l, keyboard.Key.space}, self.on_lookup_word)
 
     def start(self):
-        self.listener.start()
-
-    def switch(self, key: Union[keyboard.KeyCode, keyboard.Key, None]):
-
-        if key == keyboard.Key.ctrl_r:
-            self.on_lookup_word()
+        self.key_listener.start()
 
     def on_lookup_word(self):
 
